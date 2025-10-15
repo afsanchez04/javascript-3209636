@@ -1,0 +1,6 @@
+👉🏻 En visual studio code
+Dentro de carpeta "1-escenario-interactivo"
+1. crear index.html (Crear estructura básica)
+2. crear style.css (y vincular a HTML)
+3. crear app.js (y vincular a HTML)
+
