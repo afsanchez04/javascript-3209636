@@ -1,144 +1,439 @@
-* {
-    box-sizing: border-box;
-    padding: 0%;
-    margin: 0%;
-}
-
-
-section {
-    align-items: center;
-    display: flex;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    position: relative;
-    min-width: 800px;
-}
-
-.fondo {
-    position: relative;
-    width: 750px;
+.contenedor {
     height: 500px;
-    background-image: url("img/mijuego1.jpg");
-    background-size: cover;
-    border: 2px solid black;
+    width: 750px;
+    background-image: url(./img/bg-ghosthouse.png);
+    position: relative;
+    margin: auto;
+    
+
 }
 
-.diamante1 {
-    background-image: url("img/diamante.png.png");
-    background-size: contain;
-    width: 50px;
-    height: 50px;
+.monedapuntaje img { 
+    height: 3rem;
+    width: auto;
+    left: 39rem;
     position: absolute;
-    top: 15%;
-    left: 18%;
-}
-
-.diamante2 {
-    background-image: url("img/diamante.png.png");
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 30%;
-    left: 45%;
+    top: 1rem
 
 }
-
-
-.diamante3 {
-    background-image: url("img/diamante.png.png");
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 75%;
-    left: 77%;
-}
-
-.diamante4 {
-    background-image: url("img/diamante.png.png");
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 54%;
-    left: 70%;
-}
-
-.diamante5 {
-    background-image: url("img/diamante.png.png");
-    background-size: contain;
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 60%;
-    left: 5%;
-}
-
-.diamante6 {
-    background-image: url("img/diamante.png.png");
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-}
-
-
-
-
-.bloque1 {
-    width: 70px;
-    height: 70px;
-    background-image: url(img/bloque.png);
-    position: absolute;
-    background-repeat: no-repeat;
-    top: 82%;
-    left: 5%;
-}
-
-.bloque2 {
-    width: 70px;
-    height: 70px;
-    background-image: url(img/bloque.png);
-    position: absolute;
-    background-repeat: no-repeat;
-    top: 50%;
-    left: 55%;
-}
-
+ 
 .puntaje {
-    width: 130px;
-    position: absolute;
-    top: 10px;
-    right: 600px;
-    font-size: 10px;
-    color: white;
-    text-shadow: 2px 2px 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+ position: absolute;
+ color: white;
+ font-size: 2rem;
+left: 41.5rem;
+bottom: 27.6rem;
+
 }
 
+.plataform1 img {
+    position: relative;
+    height: 1.5rem;
+    width: auto;
+    top: 25rem;
+    left: 4rem;
+}
 
-/* Animación diamante */
-.saltar{
+.plataform2 img {
+    position: relative;
+    height: 1.5rem;
+    width: auto;
+    top: 19rem;
+    left: 20rem;
+}
+
+.plataform3 img {
+    position: relative;
+    height: 1.5rem;
+    width: auto;
+    top: 21.5rem;
+    left: 34rem;
+}
+
+.moneda1 img {
+    height: 4rem;
+    width: auto;
+    top: 10rem;
+    left: 7.7rem;
+    position: relative;
+}
+
+.moneda2 img {
+    height: 4rem;
+    width: auto;
+    top: 0.50rem;
+    left: 23.7rem;
+    position: relative;
+}
+
+.moneda3 img {
+    height: 4rem;
+    width: auto;
+    top: 1rem;
+    left: 37.9rem;
+    position: relative;
+}
+
+.enemigo1 img {
+height: 4rem;
+width: auto;
+position: relative;
+top:3rem;
+left: 7rem;
+
+}
+
+.enemigo2 img {
+height: 4rem;
+width: auto;
+position: absolute;
+left: 23rem;
+top: 16.9rem;
+
+}
+
+.enemigo3 img {
+height: 4rem;
+width: auto;
+position: absolute;
+left: 37.2rem;
+top: 21rem;
+
+}
+
+.saltomoneda {
     animation: salto 0.6s ease forwards;
 }
+
+/*animacion moneda*/
 @keyframes salto {
+
     0%{transform: translateY(0); opacity: 1;}
     30%{transform: translateY(-60px);}
     100%{transform: translateY(0); opacity: 0;}
 }
-/* Animación bloque */
-.bloque{
-    animation: moverBloque 4s linear infinite alternate;
-}
-@keyframes moverBloque {
-    0%{left: 55%}
-    100%{left: 89%;}
+
+.animacionplataform1 {
+    animation: moverplataforma1 0.5s linear infinite alternate;
 }
 
-.efecto{
-    filter: grayscale(1);
+.animacionenemigo1 {
+    animation: enemigomov1 0.5s linear infinite alternate;
 }
+
+/*animacion plataforma*/
+
+@keyframes moverplataforma1 {
+  0%{top:25rem;}
+  100%{top:19rem;}
+}
+
+@keyframes enemigomov1 {
+   0%{top:3rem;}
+   100%{top:-2rem;}
+
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.contenedor2 {
+    height: 500px;
+    width: 750px;
+    background-image: url(./img/escenario2/fondo.png);
+    position: relative;
+    margin: auto;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.mascarapuntaje img { 
+    height: 3rem;
+    width: auto;
+    left: 39rem;
+    position: absolute;
+    top: 1rem
+
+}
+
+.puntaje2 {
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+ position: absolute;
+ color: rgb(0, 0, 0);
+ font-size: 2rem;
+left: 42.5rem;
+bottom: 27.6rem;
+}
+
+.pipe1 img {
+position: relative;
+height: 6rem;
+width: auto;
+top: 15rem;
+left: 0rem;
+
+ }
+
+ .pipe2 img {
+position: relative;
+height: 6rem;
+width: auto;
+top: 9rem;
+left:40.4rem;
+transform: rotate(180deg);
+
+ }
+
+ .pipe3 img {
+position: relative;
+height: 8rem;
+width: auto;
+top: 10.8rem;
+left: 10rem;
+
+ }
+
+  .pipe4 img {
+position: relative;
+height: 8rem;
+width: auto;
+top: 2.6rem;
+left: 30rem;
+
+ }
+
+ .shyg1 img {
+height: 7rem;
+width: auto;
+position: relative;
+bottom:19.5rem;
+left: 2.5rem;
+
+ }
+
+ .shyg2 img {
+height: 7rem;
+width: auto;
+position: relative;
+bottom: 18.5rem;
+left:10.5rem;
+
+}
+
+.shyg3 img {
+height: 7rem;
+width: auto;
+position: relative;
+bottom: 25.6rem;
+left: 30.5rem;
+transform: scaleX(-1);
+}
+
+.shyg4 img {
+height: 7rem;
+width: auto;
+position: relative;
+bottom: 41rem;
+left: 39.5rem;
+transform: scaleX(-1);
+}
+
+@keyframes enemigosalto1 {
+0%{transform: translateY(0); opacity: 1;}
+    30%{transform: translateY(-60px) rotate(190deg);}
+    100%{transform: translateY(400px);}
+}
+
+.saltoshyg {
+    animation: enemigosalto1 0.6s ease forwards;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.contenedor3 {
+    height: 500px;
+    width: 750px;
+    background-image: url(./img/escenario3/Fondocueva.gif);
+    background-size: cover;
+    position: relative;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.goombapuntaje img { 
+    height: 3rem;
+    width: auto;
+    left: 39rem;
+    position: absolute;
+    top: 1rem;
+    z-index: 10;
+
+}
+
+.lava {
+    z-index: 1;
+}
+
+.puntaje3 {
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+ position: absolute;
+ color: rgb(255, 255, 255);
+ font-size: 2rem;
+left: 42.5rem;
+bottom: 27.6rem;
+z-index: 10;
+}
+
+.lava {
+height: 3rem;
+width: 100%;
+position: absolute;
+background-image: url(./img/escenario3/Lava.png);
+background-repeat: repeat;
+bottom: 0;
+}
+
+.pipey1 img {
+position: relative;
+height: 11rem;
+width: auto;
+top: -0.6rem;
+left: 2rem;
+transform: rotate(180deg);
+ }
+
+ .pipey2 img {
+position: relative;
+height: 11rem;
+width: auto;
+bottom: 11.9rem;
+left: 19rem;
+transform: rotate(180deg);
+ }
+
+  .pipey3 img {
+position: relative;
+height: 11rem;
+width: auto;
+bottom: 23.2rem;
+left: 35rem;
+transform: rotate(180deg);
+
+ }
+
+ .goomba1 img {
+height: 4rem;
+width: auto;
+position: relative;
+bottom: 30rem;
+left: 5.4rem;
+transform: rotate(180deg);
+ }
+
+ .goomba2 img {
+height: 4rem;
+width: auto;
+position: relative;
+bottom: 34rem;
+left: 22.4rem;
+transform: rotate(180deg);
+ }
+
+  .goomba3 img {
+height: 4rem;
+width: auto;
+position: relative;
+bottom: 38rem;
+left: 38.4rem;
+transform: rotate(180deg);
+ }
+
+ @keyframes enemigosalto2 {
+0%{transform: translateY(0); opacity: 1;}
+100%{transform: translateY(400px);}
+}
+
+.caidagoomba {
+    animation: enemigosalto2 0.6s ease forwards;
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.flecha1 { 
+ position: relative;
+ height: 4rem;
+ width: 4rem;
+ background-color: rgb(255, 196, 0);
+ left: 12rem;
+ bottom:22rem;
+ border-radius: 50%;
+ text-align: center;
+ font-size: 2.8rem;
+ }
+
+ .flecha2 { 
+ position: absolute;
+ height: 4rem;
+ width: 4rem;
+ background-color: rgb(255, 196, 0);
+ right: 12.5rem;
+ bottom: 22.8rem;
+ border-radius: 50%;
+ text-align: center;
+ font-size: 2.8rem;
+ }
+
+ .flech2 {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0.5rem;
+ }
+
+ .previews {
+height:7rem;
+width: auto;
+display: flex;
+justify-content: center;
+position: relative;
+bottom: 6.5rem;
+gap: 1rem;
+
+ }
+ 
+ .cuadrado {
+height: 7rem;
+width: 9rem;
+background-color: black;
+background-image: url(./img/miniaturas/preview1.png);
+background-size: cover;
+
+
+ }
+
+  .cuadrado2 {
+height: 7rem;
+width: 9rem;
+background-color: rgb(0, 0, 0);
+
+
+ }
+ 
+ .cuadrado3 {
+height: 7rem;
+width: 9rem;
+background-color: rgb(0, 0, 0);
+
+
+ }
+ 
+
+ .escena{
+    display:  none;
+ }
+ .activa{
+    display: block;
+ }
