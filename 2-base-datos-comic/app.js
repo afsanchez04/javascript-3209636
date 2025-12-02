@@ -13,3 +13,21 @@ infoComic.innerHTML = `
   <p>Género: ${comic.genero.join(", ")}</p>
   <p>Personajes ${comic.personajes.join(", ")}</p>
 `
+
+//Aquí vamos a mostrar las tarjetas de escenas
+
+//console.log(comic.escenas)
+
+comic.escenas.forEach(escena => {
+  const miCard = document.createElement("div")
+  miCard.classList.add("tarjeta-cap") 
+  miCard.innerHTML = `
+    <img src="${escena.image}" />
+    <p>${escena.nombre}</p>
+  `
+
+  infoComic.appendChild(miCard)
+  console.log(escena.nombre)
+});
+
+//["1","2","3","4"]
